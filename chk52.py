@@ -182,7 +182,7 @@ def chk(card):
 }
 
 	response = requests.post('https://ce4less.com/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
-	pattern = r'Reason: (.*?)\s*</li>'
+	pattern = r'Status code (.*?)\s*</div>'
     
 	text = response.text
 	
